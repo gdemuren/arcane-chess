@@ -1,5 +1,7 @@
 const glyphs={w:{k:'♔',q:'♕',r:'♖',b:'♗',n:'♘',p:'♙'},b:{k:'♚',q:'♛',r:'♜',b:'♝',n:'♞',p:'♟'}};
 const initial=['br','bn','bb','bq','bk','bb','bn','br','bp','bp','bp','bp','bp','bp','bp','bp','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','wp','wp','wp','wp','wp','wp','wp','wp','wr','wn','wb','wq','wk','wb','wn','wr'];
+// Keep exactly four empty ranks between the two armies.
+initial.splice(16, initial.length - 32, ...Array(32).fill(''));
 let board=[],turn='w',selected=null,legal=[],history=[],flipped=false,clocks={w:600,b:600},timer=null,finished=false;
 const $=id=>document.getElementById(id),files='abcdefgh';
 function reset(){board=[...initial];turn='w';selected=null;legal=[];history=[];clocks={w:600,b:600};finished=false;$('move-list').innerHTML='';render();startClock()}
