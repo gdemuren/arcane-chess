@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcane Chess</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header><a class="brand" href="#">ARCANE <span>CHESS</span></a><p>Think beautifully. Move boldly.</p></header>
+      <section class="game-layout">
+        <aside class="player-card dark-player"><div class="avatar">♚</div><div><span>BLACK</span><strong id="black-name">Guest</strong></div><time id="black-clock">10:00</time></aside>
+        <section class="board-wrap">
+          <div id="board" class="board" aria-label="Chess board"></div>
+          <div id="status" class="status">White to move</div>
+        </section>
+        <aside class="player-card light-player"><div class="avatar">♔</div><div><span>WHITE</span><strong>You</strong></div><time id="white-clock">10:00</time></aside>
+      </section>
+      <section class="control-panel">
+        <div class="challenge"><span class="eyebrow">TODAY'S SPARK</span><strong id="challenge-title">Win the center</strong><p id="challenge-text">Place a pawn or knight on one of the four central squares.</p></div>
+        <div class="controls"><button id="undo" class="quiet">Undo</button><button id="new-game">New game</button><button id="flip" class="quiet">Flip board</button></div>
+        <div class="moves"><span class="eyebrow">MOVE HISTORY</span><ol id="move-list"></ol></div>
+      </section>
+      <footer>Local two-player chess · Crafted for curious minds</footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
